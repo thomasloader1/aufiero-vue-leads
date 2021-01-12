@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import userStore from "./User";
+import brandStore from "./Brand";
 
 Vue.use(Vuex);
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     title: state => state.title
   },
   modules: {
-    user: userStore
+    user: userStore,
+    brand: brandStore
   }
 });

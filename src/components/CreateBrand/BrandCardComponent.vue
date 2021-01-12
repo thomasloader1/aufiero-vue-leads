@@ -1,18 +1,30 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-6" v-for="brand in allBrands.data" :key="brand.id">
+      <div class="col-6" v-for="brand in allBrands" :key="brand.id">
         <div class="card my-2">
           <div class="card-header">
-            {{ brand.brand_name }}
+            {{ brand.name }}
           </div>
           <div class="card-body">
-            <h5 class="card-title">Templates:</h5>
-            <p class="card-text">{{ brand.brand_tags }}</p>
-            <router-link class="btn btn-success" to="/importBatch"
+            <h5 class="card-title">
+              Template:
+              <span class="font-weight-bold">{{ brand.template_file }}</span>
+            </h5>
+            <p class="my-2">Tags:</p>
+            <div id="tags-brand" class="pb-3 d-inline-flex flex-wrap">
+              <span
+                v-for="(tag, index) in brand.tags.split(',')"
+                :key="index"
+                class="card-text font-weight-bold bg-primary rounded-lg px-2 py-1 text-white m-1"
+                >{{ tag }}</span
+              >
+            </div>
+
+            <router-link class="btn btn-success d-block" to="/importBatch"
               >Importar Batch</router-link
             >
-            <pre>{{ brand }}</pre>
+            <!--<pre>{{ brand }}</pre> -->
           </div>
         </div>
       </div>

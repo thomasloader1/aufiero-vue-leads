@@ -25,6 +25,11 @@ export default {
       axios
         .get(`http://localhost:3000/brands/${id}`)
         .then(res => commit("SET_BRAND", res.data.brand));
+    },
+    GET_BRANDS({ commit }, id) {
+      axios
+        .get(`http://localhost:3000/brands`)
+        .then(res => commit("SET_BRAND", res.data.brand));
     }
   },
   mutations: {

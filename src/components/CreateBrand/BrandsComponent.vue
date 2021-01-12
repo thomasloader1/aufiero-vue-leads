@@ -14,13 +14,7 @@ export default {
   },
   mounted() {
     console.log(`BrandsComponnet`);
-    // let currentObj = this;
-    // axios.get("http://localhost:3000/brands/1").then(function(res) {
-    //   console.log(typeof res.data);
-    //   currentObj.brands = res.data;
-    // });
-    // console.log(this.brands);
-    this.GET_BRAND(1);
+    this.GET_BRANDS();
     console.log(this.storeBrand);
   },
   computed: {
@@ -29,7 +23,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions(["GET_BRAND"])
+    ...mapActions(["GET_BRAND", "GET_BRANDS"])
   }
 };
 </script>

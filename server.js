@@ -40,12 +40,34 @@ const brands = {
     email_Brand_field_id: "B",
     country_Brand_field_id: "C",
     date_Brand_field_id: "D"
+  },
+  2: {
+    id: 2,
+    name: "Keyshot",
+    tags: "test, prueba, keyshot, keyshotsales",
+    commercial_campaign: "Commercial Campaign Keyshot",
+    edu_campaign: "Edu Campaing Keyshot",
+    home_campaign_name: "Home Campaign Keyshot",
+    template_file: "Keyshot_file.xls",
+    needs_country_conversion: true,
+    file_format: "XLS",
+    has_sheets: "1",
+    phone_Brand_field_id: "A",
+    email_Brand_field_id: "B",
+    country_Brand_field_id: "C",
+    date_Brand_field_id: "D"
   }
 };
 
 app.get("/users/:id", (req, res) => {
   res.send({
     user: users[req.params.id]
+  });
+});
+
+app.get("/brands", (req, res) => {
+  res.send({
+    brand: brands
   });
 });
 
