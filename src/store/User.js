@@ -1,6 +1,8 @@
 "use strict";
 import axios from "axios";
 
+const URI = "http://localhost:5000/users"
+
 export default {
   state: {
     user: {
@@ -13,7 +15,7 @@ export default {
   actions: {
     GET_USER({ commit }, id) {
       axios
-        .get(`http://localhost:3000/users/${id}`)
+        .get(`${URI}/${id}`)
         .then(res => commit("SET_USER", res.data.user));
     }
   },

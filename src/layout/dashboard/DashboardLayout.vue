@@ -16,6 +16,7 @@
           icon="ti-pencil-alt2"
         />
         <sidebar-link to="/brand-list" name="Brand List" icon="ti-bell" />
+        <sidebar-link to="/batch-list" name="Batch List" icon="ti-bell" />
         <sidebar-link to="/import-batch" name="Import Batch" icon="ti-bell" />
         <sidebar-link to="/maps" name="Map" icon="ti-map" />
       </template>

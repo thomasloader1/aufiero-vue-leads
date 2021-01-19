@@ -1,6 +1,8 @@
 "use strict";
 import axios from "axios";
 
+const URI = "http://localhost:5000/brands"
+
 export default {
   state: {
     brand: {
@@ -23,12 +25,12 @@ export default {
   actions: {
     GET_BRAND({ commit }, id) {
       axios
-        .get(`http://localhost:3000/brands/${id}`)
+        .get(`${URI}/${id}`)
         .then(res => commit("SET_BRAND", res.data.brand));
     },
     GET_BRANDS({ commit }, id) {
       axios
-        .get(`http://localhost:3000/brands`)
+        .get(`${URI}`)
         .then(res => commit("SET_BRAND", res.data.brand));
     }
   },

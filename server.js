@@ -59,6 +59,29 @@ const brands = {
   }
 };
 
+const batches ={
+  1: {
+    id: 1,
+    name: "Lumion",
+    tags: "test, prueba",
+    commercial_campaign: "Commercial Campaign Lumion",
+    edu_campaign: "Edu Campaing Lumion",
+    home_campaign_name: "Home Campaign Lumion",
+    template_file: "Lumion_file.xls",
+    needs_country_conversion: true,
+    file_format: "XLS",
+    has_sheets: "1",
+    phone_Brand_field_id: "A",
+    email_Brand_field_id: "B",
+    country_Brand_field_id: "C",
+    date_Brand_field_id: "D",
+    colE: "E",
+    colF: "F",
+    colG: "G",
+    colH: "H",
+  },
+}
+
 app.get("/users/:id", (req, res) => {
   res.send({
     user: users[req.params.id]
@@ -77,4 +100,16 @@ app.get("/brands/:id", (req, res) => {
   });
 });
 
-app.listen(3000);
+app.get("/batches/", (req, res) => {
+  res.send({
+    batches: batches
+  });
+});
+
+app.get("/batches/:id", (req, res) => {
+  res.send({
+    batches: batches[req.params.id]
+  });
+});
+
+app.listen(5000);

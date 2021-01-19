@@ -1,0 +1,19 @@
+
+> vue-paper-dashboard@1.0.0 serve
+> vue-cli-service serve --open
+
+ INFO  Starting development server...
+ ERROR  Failed to compile with 1 error04:45:01
+
+ error  in ./src/assets/sass/paper-dashboard.scss
+
+Syntax Error: Error: Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime (88)
+For more information on which environments are supported please see:
+https://github.com/sass/node-sass/releases/tag/v4.14.1
+
+
+ @ ./src/assets/sass/paper-dashboard.scss 4:14-175 14:3-18:5 15:22-183
+ @ ./src/plugins/paperDashboard.js
+ @ ./src/main.js
+ @ multi (webpack)-dev-server/client?http://192.168.100.113:8081/sockjs-node (webpack)/hot/dev-server.js ./src/main.js
+
