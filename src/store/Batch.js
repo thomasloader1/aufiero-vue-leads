@@ -30,17 +30,17 @@ export default {
     GET_BATCH({ commit }, id) {
       axios
         .get(`${URI}/${id}`)
-        .then(res => commit("SET_BRAND", res.data.brand));
+        .then(res => commit("SET_BATCH", res.data.batches));
     },
     GET_BATCHES({ commit }, id) {
       axios
         .get(`${URI}`)
-        .then(res => commit("SET_BRAND", res.data.brand));
+        .then(res => commit("SET_BATCH", res.data.batches));
     }
   },
   mutations: {
-    SET_BATCH(state, brand) {
-      state.brand = brand;
+    SET_BATCH(state, batches) {
+      state.batches = batches;
     }
   },
   getters: {

@@ -12,6 +12,7 @@ import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
 import CreateBrand from "../components/CreateBrand/CreateBrandComponent.vue";
 import Brand from "../components/CreateBrand/BrandsComponent.vue";
+import BatchList from "../components/ImportBatch/BatchList.vue";
 
 const routes = [
   {
@@ -68,7 +69,12 @@ const routes = [
         path: "import-batch",
         name: "Import Batch",
         component: CreateBrand
-      }
+      },
+      {
+        path: "batch-list",
+        name: "List Batch",
+        component: BatchList
+      },
     ]
   },
   { path: "*", component: NotFound }

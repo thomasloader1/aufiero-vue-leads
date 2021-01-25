@@ -16,6 +16,6 @@ export default new Vuex.Store({
   modules: {
     user: userStore,
     brand: brandStore,
-    batch: batchStore
+    batch: batchStore,
   }
 });
