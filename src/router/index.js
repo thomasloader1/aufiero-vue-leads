@@ -5,6 +5,9 @@ Vue.use(VueRouter);
 
 // configure router
 const router = new VueRouter({
+  scrollBehavior(){
+    return window.scrollTo({top:0, behavior: 'smooth'})
+  },
   routes, // short for routes: routes
   linkActiveClass: "active"
 });

@@ -31,12 +31,12 @@ import {
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-//library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
+library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
 
-//Vue.config.productionTip = false;
+Vue.config.productionTip = false;
 
 //Vue.use(VeeValidate);
-//Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(PaperDashboard);
 
 /* eslint-disable no-new */

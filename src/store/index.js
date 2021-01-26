@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import userStore from "./User";
 import brandStore from "./Brand";
 import batchStore from "./Batch";
+import loginStore from "./Login";
 
 Vue.use(Vuex);
 
@@ -17,5 +18,6 @@ export default new Vuex.Store({
     user: userStore,
     brand: brandStore,
     batch: batchStore,
+    login: loginStore,
   }
 });

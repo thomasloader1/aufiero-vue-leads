@@ -1,4 +1,5 @@
 import DashboardLayout from "@/layout/dashboard/DashboardLayout.vue";
+import LoginLayout from "@/layout/dashboard/LoginLayout.vue"
 // GeneralViews
 import NotFound from "@/pages/NotFoundPage.vue";
 
@@ -10,15 +11,35 @@ import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
+import Login from "@/pages/Login.vue";
 import CreateBrand from "../components/CreateBrand/CreateBrandComponent.vue";
 import Brand from "../components/CreateBrand/BrandsComponent.vue";
 import BatchList from "../components/ImportBatch/BatchList.vue";
 
 const routes = [
   {
-    path: "/",
+    path: '/',
+    component: LoginLayout,
+    redirect: '/auth',
+    beforeEnter: (to, from, next) =>{
+      const isAuth = localStorage.getItem('isAuth');
+      isAuth === 'true' ? next({path:'/main/dashboard'}) : next()
+    },
+    children:[
+      {
+        path: "auth",
+        name: "login",
+        component: Login
+      },
+    ]
+  },
+  {
+    path: "/main",
     component: DashboardLayout,
-    redirect: "/dashboard",
+    beforeEnter: (to, from, next) =>{
+      const isAuth = localStorage.getItem('isAuth');
+      isAuth === 'true' ? next() : next({path:'/'})
+    },
     children: [
       {
         path: "dashboard",

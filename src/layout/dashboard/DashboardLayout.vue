@@ -9,16 +9,16 @@
           icon="ti-view-list-alt"
         />
         <sidebar-link to="/typography" name="Typography" icon="ti-text" />-->
-        <sidebar-link to="/dashboard" name="Dashboard" icon="ti-panel" />
+        <sidebar-link to="/main/dashboard" name="Dashboard" icon="ti-panel" />
         <sidebar-link
-          to="/create-brand"
+          to="/main/create-brand"
           name="Create Brand"
           icon="ti-pencil-alt2"
         />
-        <sidebar-link to="/brand-list" name="Brand List" icon="ti-bell" />
-        <sidebar-link to="/batch-list" name="Batch List" icon="ti-bell" />
-        <sidebar-link to="/import-batch" name="Import Batch" icon="ti-bell" />
-        <sidebar-link to="/maps" name="Map" icon="ti-map" />
+        <sidebar-link to="/main/brand-list" name="Brand List" icon="ti-bell" />
+        <sidebar-link to="/main/batch-list" name="Batch List" icon="ti-bell" />
+        <sidebar-link to="/main/import-batch" name="Import Batch" icon="ti-bell" />
+        <!--<sidebar-link to="/maps" name="Map" icon="ti-map" />-->
       </template>
       <mobile-menu>
         <li class="nav-item">
@@ -69,6 +69,11 @@ export default {
     ContentFooter,
     DashboardContent,
     MobileMenu
+  },
+  data(){
+    return{
+      uriAuth: '/main'
+    }
   },
   methods: {
     toggleSidebar() {
